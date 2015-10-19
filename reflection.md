@@ -1,5 +1,7 @@
 ##3.5 Website - Reflections
 
+__Website Link__
+http://ryanjho.github.io
 
 __What did you learn about CSS padding, borders, and margin by doing this challenge?__
 - Doing this challenging helped to solidify my knowledge of the different properties associated with CSS padding, borders and margin. I learned how to use margin effectively to space out HTML elements, and also use padding to ensure that there is enough space between the element's content and its border. 
@@ -12,6 +14,6 @@ __What aspects of your design did you find easiest to implement? What was most d
 - It was straightforward to implement the main design structure of my website (i.e. header, main and footer elements). However, it got slightly more challenging when I was trying to implement the finer design elements of my website - the links to my social media profiles, navigation bar and search bar, footer navigation bar, etc.) 
 - It was also pretty difficult to style my blog index page, as there are multiple elements nested within each element. 
 
-What did you learn about adding and formatting elements with CSS in this challenge?
+__What did you learn about adding and formatting elements with CSS in this challenge?__
 - I learned that it is useful to use classes for styling different elements, since I can easily change the parameters of each class, and have all the dependent elements reflect the change immediately.
 - I also learned more about the different positioning properties, and how to use the float property to move HTML elements around the page. 
