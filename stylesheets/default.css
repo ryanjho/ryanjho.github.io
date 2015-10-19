@@ -1,0 +1,139 @@
+@font-face {
+	font-family: SourceSansPro-Light;
+	src: url(../fonts/SourceSansPro-Light.otf) format("opentype");
+}
+
+body {
+	font-family: SourceSansPro-Light;
+	margin: 0px;
+}
+
+header {
+	height: 115px;
+	position: relative;
+}
+
+.header_footer {
+	background-color: #0077b5;
+	color: white;
+}
+
+.introduction {
+	/* border: 1px dashed black; */
+	display: inline-block;
+	float: left;
+	height: 100px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.introduction h1 a {
+	/* border: 1px dashed black; */
+	text-decoration: none;
+}
+
+#tagline {
+	margin-bottom: 0px;
+}
+
+#social_media {
+	position: absolute;
+	/* border: 1px dashed black; */
+	right: 0px;
+	top: 0px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+#social_media a {
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+
+#social_media form {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.navbar {
+	/* border: 1px dashed black; */
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	float: right;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.navbar a {
+	display: inline-block;
+	margin-right: 5px;
+	/* border: 1px dashed black; */
+	padding: 5px;
+	text-decoration: none;
+	color: white;
+}
+
+.navbar a:hover {
+	border: 1px solid white;
+}
+
+.navbar a:active {
+	background-color: black;
+	color:white;
+}
+
+main {
+	text-align: center;
+	/* border: 1px dashed black;*/
+	margin: 5px;
+}
+
+#profile_picture {
+	border-radius: 50%;
+}
+
+footer {
+	font-weight: bold;
+	/* border: 1px	dashed black; */
+	position: relative;
+	height: 50px;
+	width: 100%;
+	overflow: auto;
+}
+
+#copyright {
+	/* border: 1px dashed	black; */
+	margin-left: 5px;
+	display: inline-block;
+	float: left;
+	width: 25%;
+}
+
+.footerbar {
+	/* border: 1px dashed black; */
+	float: left;
+	display: inline-block;
+	margin: 16px;
+	width: 50%;
+}
+
+.footerbar a {
+	text-decoration: none;
+	color: white;
+	margin-left: 10px;
+	padding: 3px;
+}
+
+.footerbar a:hover {
+	border: 1px solid white;
+}
+
+#design_by {
+	/* border: 1px dashed black; */
+	float: right;
+	display: inline-block;
+	text-align: right;
+	margin-right: 5px;
+}
