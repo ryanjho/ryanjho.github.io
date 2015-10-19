@@ -105,7 +105,8 @@ footer {
 
 #copyright {
 	/* border: 1px dashed	black; */
-	margin-left: 5px;
+	margin-left: 10px;
+	margin-bottom: 10px;
 	display: inline-block;
 	float: left;
 	width: 25%;
@@ -116,7 +117,6 @@ footer {
 	float: left;
 	display: inline-block;
 	margin: 16px;
-	width: 50%;
 }
 
 .footerbar a {
@@ -124,6 +124,7 @@ footer {
 	color: white;
 	margin-left: 10px;
 	padding: 3px;
+	margin-bottom: 10px;
 }
 
 .footerbar a:hover {
@@ -135,5 +136,6 @@ footer {
 	float: right;
 	display: inline-block;
 	text-align: right;
-	margin-right: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
