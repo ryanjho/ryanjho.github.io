@@ -1,3 +1,7 @@
+html {
+	margin-bottom: 0px;
+}
+
 @font-face {
 	font-family: SourceSansPro-Light;
 	src: url(../fonts/SourceSansPro-Light.otf) format("opentype");
@@ -6,11 +10,14 @@
 body {
 	font-family: SourceSansPro-Light;
 	margin: 0px;
+	min-height: 100%;
+	width: 100%;
 }
 
 header {
 	height: 115px;
 	position: relative;
+	width: 100%;
 }
 
 .header_footer {
@@ -23,7 +30,7 @@ header {
 	display: inline-block;
 	float: left;
 	height: 100px;
-	margin-left: 10px;
+	margin-left: 20px;
 	margin-bottom: 5px;
 }
 
@@ -36,24 +43,62 @@ header {
 	margin-bottom: 0px;
 }
 
-#social_media {
+.social_media {
 	position: absolute;
-	/* border: 1px dashed black; */
 	right: 0px;
-	top: 0px;
-	margin-top: 5px;
+	top: 5px;
 	margin-right: 10px;
 }
 
-#social_media a {
+.icon_sizing {
+	width: 32px;
+	height: 32px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
 	display: inline-block;
 	vertical-align: middle;
-	
 }
 
-#social_media form {
+#icon_linkedin {
+	background-image: url('../imgs/social-media/icon-linkedin.png');
+}
+
+#icon_linkedin:hover {
+	background-image: url('../imgs/social-media/icon-black-linkedin.png');
+}
+
+#icon_github {
+	background-image: url('../imgs/social-media/icon-github.png'); 
+}
+
+#icon_github:hover {
+	background-image: url('../imgs/social-media/icon-black-github.png'); 
+}
+
+#icon_facebook {
+	background-image: url('../imgs/social-media/icon-facebook.png'); 
+}
+
+#icon_facebook:hover {
+	background-image: url('../imgs/social-media/icon-black-facebook.png'); 
+}
+
+#icon_twitter {
+	background-image: url('../imgs/social-media/icon-twitter.png'); 
+}
+
+#icon_twitter:hover {
+	background-image: url('../imgs/social-media/icon-black-twitter.png'); 
+}
+
+.social_media a {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.social_media form {
+	vertical-align: middle;
+	display: inline-block;
 }
 
 .navbar {
@@ -70,6 +115,7 @@ header {
 	display: inline-block;
 	margin-right: 5px;
 	/* border: 1px dashed black; */
+	border: 1px solid #0077b5;
 	padding: 5px;
 	text-decoration: none;
 	color: white;
@@ -86,8 +132,10 @@ header {
 
 main {
 	text-align: center;
-	/* border: 1px dashed black;*/
+	/* border: 1px dashed black; */
 	margin: 5px;
+	height: 100%;
+	position: relative;
 }
 
 #profile_picture {
@@ -96,11 +144,11 @@ main {
 
 footer {
 	font-weight: bold;
-	/* border: 1px	dashed black; */
-	position: relative;
-	height: 50px;
+	/* border: 1px	dashed black; */ 
+	height: 55px;
 	width: 100%;
-	overflow: auto;
+	position: relative;
+	bottom: 0px;
 }
 
 #copyright {
@@ -125,6 +173,7 @@ footer {
 	margin-left: 10px;
 	padding: 3px;
 	margin-bottom: 5px;
+	border: 1px solid #0077b5;
 }
 
 .footerbar a:hover {
