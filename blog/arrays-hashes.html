@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ryan Ho - Blog</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+<body>
+	<header>
+		<h1><a href="/index.html">Ryan Ho</a></h1>
+		<h4>Think, Create, Do, Repeat</h4>
+		<div>
+			<a href="http://linkedin.com"><img src="../imgs/linkedin-icon.png" alt="LinkedIn" /></a>
+			<a href="http://github.com/ryanjho"><img src="../imgs/GitHub-Mark-32px.png" alt="GitHub" /></a>
+			<a href="http://facebook.com"><img src="../imgs/facebook-icon.png" alt="Facebook" /></a>
+			<a href="http://twitter.com/ryanjho90"><img src="../imgs/twitter-icon.png" alt="Twitter" /></a>
+			<form>
+				<input type="search" name="searchbox" placeholder="Search here...">
+			</form>
+		</div>
+		<nav>
+			<a href="./about.html">About</a>
+			<a href="./blog/index.html">Blog</a>
+			<a href="./resume.html">Resume</a>
+			<a href="./portfolio.html">Portfolio</a>
+			<a href="./contact.html">Contact</a>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<article>
+				<header class="blog_header">
+					<h2>Arrays and Hashes</h2>
+					<h4>October 26, 2015 | Coding</h4>
+				</header>
+				<h3>Overview</h3>
+	    		<p>Arrays and Hashes are great tools for you to use to store and access information in an organized way. Both are ordered lists that allow you to store different types of objects (e.g. Strings, Integers, Hashes, etc.). They also allow you to access the information you stored using index integers (for arrays) and keys (for Hashes). Lets take a deeper look into both Arrays and Hashes.</p>
+
+	    		<h3>Arrays</h3>
+	    		<p>Arrays store objects, from Classes, Strings, Integers, Arrays, Hashes, etc. It is a very useful way to store and access information in an orderly manner. For example, your boss wants you to store some company data sets of monthly sales figures. You can store that information into arrays! You can also choose to store an array within an array, which makes the array class a very flexible way to store information. Here is an example of storing the numbers 1 to 10 in an array<pre><code>numbers_array = [1,2,3,4,5,6,7,8,9,10]</code></pre>Within this array, the values stored can be accessed in the following way:<pre><code>numbers_array[0]	#returns 1</code></pre><pre><code>numbers_array[1]	#returns 2</code></pre>Array indexing starts at 0 for the first value stored, and has index of 1 for the second value stored, so on and so forth.</p>
+
+	    		<h3>Hashes</h3>
+	    		<p>Hashes are similar to Arrays in that it stores information in an organized way as well, but it uses key/value pairs to store and access information. Instead of having an integer indexing system (like in Arrays), Hashes uses keys to store values, and these keys are unique and can only be used once. Using keys in Hashes allows more customizability in labeling compared to Arrays, providing more detailed information about the data being stored. One example is as follows: <pre><code>dog_breeds = {
+	    		:Sunny => "Golden Retriever"
+	    		:Truffles => "Chihuahua"
+	    		:Rocky => "German Shephard"
+	    		}</code></pre>To access the breed for Truffles, I can do the following: <pre><code>dog_breeds[:Truffles]	#returns "Chihuahua"</code></pre></p>
+
+	    		<p>Overall, Arrays and Hashes are great ways to store information in an organized way. Choosing one over the other ultimately depends on the context in which you are working in.</p>
+
+			</article>
+			<div class= "comments">
+				<h4>Comments box</h4>
+				<form>
+					Name: <input type="text" placeholder="Add your name!"><br/>
+					Email: <input type="text" name="email" placeholder="Add your email address!"><br/>
+					Comments: <br/>
+					<textarea placeholder="Write your comments here!"></textarea><br/>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+
+			<div class="Pagelinks">
+				<h4>Pages</h4>
+				<ul>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<aside>
+			<img src="http://ryanjho.github.io/imgs/ryan-ho-icon.png" width="150" height="180" alt="Ryan Ho" />
+			<p>Hi there! <br />I'm Ryan, and I am passionate about entrepreneurship and technology. I also enjoy problem-solving and building things. I am currently learning how to code at Dev Bootcamp.</p>
+		</aside>
+		<aside>
+			<h2>Popular posts</h2>
+			<ul>
+				<li><a href="#">Popular blog post 1...</a></li>
+				<li><a href="#">Popular blog post 2...</a></li>
+				<li><a href="#">Popular blog post 3...</a></li>
+				<li><a href="#">Popular blog post 4...</a></li>
+			</ul>
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="#">Coding</a></li>
+				<li><a href="#">Entrepreneurship</a></li>
+				<li><a href="#">Technology</a></li>
+				<li><a href="#">Fitness/Sports</a></li>
+			</ul>
+			<h2>Subscribe to this blog</h2>
+			<p>Enter your email address to subscribe to my blog and receive notifications of new posts by email</p>
+			<form>
+				<input type="text" placeholder="Your email address">
+				<input type="submit" value="Submit">
+			</form>
+		</aside>
+	</main>
+
+	<footer>
+		<p>© 2015 Ryan Ho</p>
+		<nav>
+			<a href="./about.html">About</a>
+			<a href="./blog/index.html">Blog</a>
+			<a href="./resume.html">Resume</a>
+			<a href="./portfolio.html">Portfolio</a>
+			<a href="./contact.html">Contact</a>
+		</nav>
+		<p>Designed by Ryan Ho</p>
+	</footer>
+</body>
+</html>
