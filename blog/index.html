@@ -1,91 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ryan Ho - Blog</title>
+	<meta charset="UTF-8">
+	<title>Ryan Ho</title>
+	<link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
 </head>
+
 <body>
-	<header>
-		<h1><a href="/index.html">Ryan Ho</a></h1>
-		<h4>Think, Create, Do, Repeat</h4>
-		<div>
-			<a href="http://linkedin.com"><img src="../imgs/linkedin-icon.png" alt="LinkedIn" /></a>
-			<a href="http://github.com/ryanjho"><img src="../imgs/GitHub-Mark-32px.png" alt="GitHub" /></a>
-			<a href="http://facebook.com"><img src="../imgs/facebook-icon.png" alt="Facebook" /></a>
-			<a href="http://twitter.com/ryanjho90"><img src="../imgs/twitter-icon.png" alt="Twitter" /></a>
+	<header class="header_footer">
+		<div class="introduction">
+			<h1><a class="header_footer" href="/index.html">Ryan Ho</a></h1>
+			<h4 id="tagline">Think, Create, Do, Repeat.</h4>
+		</div>
+		<div class="social_media">
+			<a href="http://linkedin.com"><div class="icon_sizing" id="icon_linkedin"></div></a>
+			<a href="http://github.com/ryanjho"><div class="icon_sizing" id="icon_github"></div></a>
+			<a href="http://facebook.com"><div class="icon_sizing" id="icon_facebook"></div></a>
+			<a href="http://twitter.com/ryanjho90"><div class="icon_sizing" id="icon_twitter"></div></a>
 			<form>
 				<input type="search" name="searchbox" placeholder="Search here...">
 			</form>
 		</div>
-		<nav>
+		<nav class="navbar">
+			<a href="./about.html">ABOUT</a>
+			<a href="./blog/index.html">BLOG</a>
+			<a href="./resume.html">RESUME</a>
+			<a href="./projects/index.html">PORTFOLIO</a>
+			<a href="./contact.html">CONTACT ME</a>
+		</nav>
+	</header>
+
+	<main>
+		<h1>My Blog Posts</h1>
+		<h4><a href="http://ryanjho.github.io/blog/git.html">Week 1 Reflections: Version Control, Git, GitHub</a></h4>
+		<h4><a href="http://ryanjho.github.io/blog/css-concepts.html">CSS Concepts</a>
+		<h4><a href="http://ryanjho.github.io/blog/arrays-hashes.html">Arrays and Hashes</a>
+		<h4><a href="http://ryanjho.github.io/blog/enumerable-methods.html">Enumerable Methods</a>
+		<h4><a href="http://ryanjho.github.io/blog/ruby-classes.html">Ruby Classes</a>
+		<h4><a href="http://ryanjho.github.io/blog/Javascript.html">Javascript</a>
+		<h4><a href="http://ryanjho.github.io/blog/tech.html">Tech</a>
+	</main>
+
+	<footer class="header_footer">
+		<p id="copyright">© 2015 Ryan Ho</p>
+		<nav class="footerbar">
 			<a href="./about.html">About</a>
 			<a href="./blog/index.html">Blog</a>
 			<a href="./resume.html">Resume</a>
 			<a href="./portfolio.html">Portfolio</a>
 			<a href="./contact.html">Contact</a>
 		</nav>
-	</header>
-
-	<main>
-		<section>
-			<h1>Latest posts</h1>
-			<article>
-				<h2><a href="http://ryanjho.github.io/blog/git.html">Week 1 Reflections: Version Control, Git, GitHub</a></h2>
-				<p>The start of my coding learning journey</p>
-			</article>
-			<article>
-				<h2>Blogpost 2</h2>
-				<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vestibulum ultricies, placerat morbi amet vel, nullam in in lorem vel. In molestie elit dui dictum, praesent nascetur pulvinar sed, in dolor pede in aliquam, risus nec error quis pharetra.</p>
-			</article>
-			<br />
-			<article>
-				<h2>Blogpost 3</h2>
-				<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vestibulum ultricies, placerat morbi amet vel, nullam in in lorem vel. In molestie elit dui dictum, praesent nascetur pulvinar sed, in dolor pede in aliquam, risus nec error quis pharetra.</p>
-			</article>
-			<article>
-				<h2>Blogpost 4</h2>
-				<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vestibulum ultricies, placerat morbi amet vel, nullam in in lorem vel. In molestie elit dui dictum, praesent nascetur pulvinar sed, in dolor pede in aliquam, risus nec error quis pharetra.</p>
-			</article>
-		</section>
-		<aside>
-			<img src="http://ryanjho.github.io/imgs/ryan-ho-icon.png" width="150" height="180" alt="Ryan Ho" />
-			<p>Hi there! <br />I'm Ryan, and I am passionate about entrepreneurship and technology. I also enjoy problem-solving and building things. I am currently learning how to code at Dev Bootcamp.</p>
-		</aside>
-		<aside>
-			<h2>Popular posts</h2>
-			<ul>
-				<li><a href="#">Popular blog post 1...</a></li>
-				<li><a href="#">Popular blog post 2...</a></li>
-				<li><a href="#">Popular blog post 3...</a></li>
-				<li><a href="#">Popular blog post 4...</a></li>
-			</ul>
-
-			<h2>Categories</h2>
-			<ul>
-				<li><a href="#">Coding</a></li>
-				<li><a href="#">Entrepreneurship</a></li>
-				<li><a href="#">Technology</a></li>
-				<li><a href="#">Fitness/Sports</a></li>
-			</ul>
-
-			<h2>Subscribe to this blog</h2>
-			<p>Enter your email address to subscribe to my blog and receive notifications of new posts by email</p>
-			<form>
-				<input type="text" placeholder="Your email address">
-				<input type="submit" value="Submit">
-			</form>
-		</aside>
-	</main>
-
-	<footer>
-		<p>© 2015 Ryan Ho</p>
-		<nav>
-			<a href="../about.html">About</a>
-			<a href="../blog/index.html">Blog</a>
-			<a href="../resume.html">Resume</a>
-			<a href="../portfolio.html">Portfolio</a>
-			<a href="../contact.html">Contact</a>
-		</nav>
-		<p>Designed by Ryan Ho</p>
+		<p id="design_by">Designed by Ryan Ho</p>
 	</footer>
 </body>
 </html>
