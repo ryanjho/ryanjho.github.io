@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodoh Lah Trivia App</title>
+    <title>Bodoh Lah - Trivia Game</title>
     <link href="./src/main.css" rel="stylesheet" type="text/css" />
+    <link href="./src/game.css" rel="stylesheet" type="text/css" />
     <script
         src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
@@ -14,10 +15,9 @@
 </head>
 <body>
     <div class="container">
-        <div id="home" class="flex-center flex-column">
-            <h1>Bodoh Lah Trivia Game</h1>
-            <a class="button" href="./game.html">Play</a>
-            <a class="button" href="./highscores.html">High Scores</a>
+        <div id="game" class="flex-center flex-column">
+            <h1 id="question">Test Question</h1>
+            <div class="choices"></div>
         </div>
     </div>
 </body>
