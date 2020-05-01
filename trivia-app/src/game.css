@@ -14,11 +14,16 @@
 }
 
 .option-number {
-    padding: 10px;
+    padding: 20px 30px;
+    
     background-color: darkorange;
     color: white;
 }
 
 .option-text {
-    padding: 10px;
+    padding: 20px;
+}
+
+.correct-option {
+    background-color: green;
 }
