@@ -1,22 +1,34 @@
-console.log('Hello world');
+const triviaQuestions = [];
+
+const loadTriviaQuestions = array => {
+    array.forEach(element => {
+        triviaQuestions.push(element);
+    })
+};
 
 $( () => {
 
     $.ajax({
         url: 'https://opentdb.com/api.php?amount=10'
     }).then(data => {
-        console.log(data.results[0]);
-
-        $('#question').text(data.results[0].question)
-        const choices = [];
-        choices.push(data.results[0].correct_answer);
-        data.results[0].incorrect_answers.forEach(choice => {
-            choices.push(choice);
-        })
         
-        while (choices.length > 0 ) {
-            const choice = choices.splice(Math.floor(Math.random() * choices.length), 1);
-            $('.choices').append($('<p>').text(choice));
+        const randomNumber = Math.floor(Math.random() * data.results.length);
+        const options = [];
+
+        const selectedTriviaObject = data.results[randomNumber];
+        $('#question').text(selectedTriviaObject.question);
+        
+        console.log(selectedTriviaObject);
+
+        options.push(selectedTriviaObject.correct_answer);
+        selectedTriviaObject.incorrect_answers.forEach(option => {
+            options.push(option);
+        })
+
+        const iterations = options.length;        
+        for (let i = 0; i < iterations; i++) {
+            const option = options.splice(Math.floor(Math.random() * options.length), 1);
+            $('.options-section').append($('<div>').addClass('option-container').html(`<p class='option-number'>${i+1}</p><p class='option-text'>${option}</p>`));
         }
         
     })

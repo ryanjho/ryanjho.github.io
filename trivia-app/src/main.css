@@ -13,6 +13,7 @@
     align-items: center;
     margin: 0 auto;
     max-width: 800px;
+    padding: 20px;
 }
 
 .container > * {
@@ -61,6 +62,7 @@ h1, h2, h3, h4 {
 .button:hover {
     cursor: pointer;
     background-color: blue;
+    box-shadow: 2px 2px 2px rgba(99, 176, 248, 0.5);
 }
 
 .question {
