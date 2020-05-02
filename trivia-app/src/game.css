@@ -9,8 +9,8 @@
 
 .option-container:hover {
     cursor: pointer;
-    background-color: orange;
-    box-shadow: 2px 2px 2px rgba(99, 176, 248, 0.5);
+    /* background-color: orange; */
+    box-shadow: 10px 10px 10px rgba(99, 176, 248, 0.5);
 }
 
 .option-number {
@@ -26,4 +26,21 @@
 
 .correct-option {
     background-color: green;
+}
+
+.wrong-option {
+    background-color: red;
+}
+
+#game-information-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+#question-number-section, #score-section {
+    text-align: center;
+}
+
+.game-information {
+    font-size: 42px;
 }
