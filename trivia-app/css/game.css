@@ -40,7 +40,8 @@
 #question-number-section, #score-section, #difficulty-section {
     text-align: center;
     width: 33%;
-    border: 1px solid orange;
+    background-color: rgba(243, 212, 72, 0.5);
+    border-radius: 10px;
 }
 
 .game-information {

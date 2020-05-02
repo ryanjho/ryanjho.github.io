@@ -9,9 +9,8 @@ const loadQuestions = array => {
 }
 
 const displayGameInformation = () => {
-    $('#question-number').text(`${questionCounter} / ${numberQuestions}`);
+    $('#question-number').text(`${questionCounter} of ${numberQuestions}`);
     $('#difficulty').text(`${currentQuestion.difficulty[0].toUpperCase() + currentQuestion.difficulty.slice(1)}`);
-    console.log(currentQuestion.difficulty);
     $('#score').text(`${score}`);
 }
 
@@ -79,12 +78,32 @@ const getQuestion = array => {
 
 const startGame = (data) => {
     questionCounter = 0;
-    localStorage.clear();
+    localStorage.setItem('userFinalScore', '0');
     loadQuestions(data);
     getQuestion(questions);
 }
 
+const openModal = () => {
+    $('#openModal').on('click', () => {
+        console.log('close');
+        $('#modal').css('display', 'block');
+        $('#modal').addClass('hello');
+    })
+}
+
+const closeModal = () => {
+    $('#closeModal').on('click', () => {
+        console.log('close');
+        $('#modal').css('display', 'none');
+    })
+    
+}
+
 $( () => {
+
+    openModal();
+    closeModal();
+
     $.ajax({
         url: 'https://opentdb.com/api.php?amount=3'
     }).then(data => {
