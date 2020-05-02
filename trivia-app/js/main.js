@@ -9,7 +9,9 @@ const loadQuestions = array => {
 }
 
 const displayGameInformation = () => {
-    $('#question-number').text(`${questionCounter} / ${numberQuestions}`)
+    $('#question-number').text(`${questionCounter} / ${numberQuestions}`);
+    $('#difficulty').text(`${currentQuestion.difficulty[0].toUpperCase() + currentQuestion.difficulty.slice(1)}`);
+    console.log(currentQuestion.difficulty);
     $('#score').text(`${score}`);
 }
 
@@ -60,9 +62,11 @@ const displayQuestionOptions = (question) => {
 }
 
 const getQuestion = array => {
-    if (questions.length === 0) return $(location).attr('href', './result.html')
+    if (questions.length === 0) {
+        localStorage.setItem('userFinalScore', score);
+        return $(location).attr('href', './result.html')
+    }
     questionCounter++;
-    displayGameInformation();
     $('.options-section').empty();
 
     const randomIndex = Math.floor(Math.random() * array.length) - 1;
@@ -70,19 +74,22 @@ const getQuestion = array => {
 
     displayQuestionText(currentQuestion);
     displayQuestionOptions(currentQuestion);
+    displayGameInformation();
 }
 
 const startGame = (data) => {
     questionCounter = 0;
+    localStorage.clear();
     loadQuestions(data);
     getQuestion(questions);
 }
 
 $( () => {
     $.ajax({
-        url: 'https://opentdb.com/api.php?amount=15'
+        url: 'https://opentdb.com/api.php?amount=3'
     }).then(data => {
         startGame(data.results);
+        console.log(localStorage.getItem('userFinalScore'));
     }).catch(error => {
         console.log("ERROR MESSAGE BELOW:")
         console.log(error);
