@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodoh Lah Trivia App</title>
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+    <link href="./css/result.css" rel="stylesheet" type="text/css" />
+    <script
+        src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+        crossorigin="anonymous">
+    </script>
+    <script src="./js/result.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="results" class="flex-center flex-column">
+            <p>Your Final Score:</p>
+            <h1 id="final-score"></h1>
+            <form>
+                <input type="text" id="username" placeholder="Username"/>
+                <button type="submit" id="save-score-button" class="button">Save Score</button>
+            </form>
+            <a class="button" href="./index.html">Play Again</a>
+            <a class="button" href="./highscores.html">High Scores</a>
+        </div>
+    </div>
+</body>
+</html>

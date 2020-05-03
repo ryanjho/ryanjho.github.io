@@ -1,0 +1,49 @@
+.option-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 24px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.option-container:hover {
+    cursor: pointer;
+    /* background-color: orange; */
+    box-shadow: 10px 10px 10px rgba(99, 176, 248, 0.5);
+}
+
+.option-number {
+    padding: 20px 30px;
+    
+    background-color: darkorange;
+    color: white;
+}
+
+.option-text {
+    padding: 20px;
+}
+
+.correct-option {
+    background-color: green;
+}
+
+.wrong-option {
+    background-color: red;
+}
+
+#game-information-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+#question-number-section, #score-section, #difficulty-section {
+    text-align: center;
+    width: 33%;
+    background-color: rgba(243, 212, 72, 0.5);
+    border-radius: 10px;
+}
+
+.game-information {
+    font-size: 42px;
+}
