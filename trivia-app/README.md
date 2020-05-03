@@ -26,18 +26,19 @@ As a player, I want to access the Home Page and start playing the game.
 
 ### 2. Choose Difficulty Level ###
 As a player, I want to choose the difficulty level of the game before starting.
-
+![Bodoh Lah! Difficulty Levels](./img/Bodoh-Lah-Difficulty-Levels.jpg "Bodoh Lah! Difficulty Levels")
 
 ### 3. Play Game ###
 As a player, I want to start playing the game and click to select my answer to the question.
+![Bodoh Lah! Game Page](./img/Bodoh-Lah-Game-Page.jpg "Bodoh Lah! Game Page")
 
 ### 4. Highlight Correct Answer If Wrong Answer Selected ###
 As a player, I would like to know the correct answer to the question if I have selected the wrong answer.
-
+![Bodoh Lah! Wrong Answer](./img/Bodoh-Lah-Wrong-Answer.jpg "Bodoh Lah! Wrong Answer")
 
 ### 5. Result Page ##
 As a player, I would like to check out my final score after the game is played. I would also like to save my score with my username.
-
+![Bodoh Lah! Result Page](./img/Bodoh-Lah-Result-Page.jpg "Bodoh Lah! Result Page")
 
 ## Additional Features To Add With More Time ##
 * Sign in Feature
