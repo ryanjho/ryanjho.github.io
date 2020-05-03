@@ -1,0 +1,86 @@
+/* GENERAL MODAL STYLING */
+.modal {
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+}
+
+.modal-textbox {
+    background-color: white;
+    border-radius: 10px;
+    height: 50%;
+    width: 80%;
+    margin: 10% auto;
+    padding: 20px;
+    overflow: auto;
+}
+
+.close-modal {
+    float: right;
+    margin-top: 20px;
+    background-color: red;
+}
+
+
+/* ABOUT MODAL STYLING */
+#about-modal {
+    display: none;
+}
+
+#open-about-modal {
+    background-color: red;
+    margin: 20px;
+}
+
+
+/* DIFFICULTY LEVEL MODAL STYLING */
+#difficulty-level-modal {
+    display: none;
+}
+
+.difficulty-level-option {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.difficulty-level-option:hover {
+    background-color: rgba(99, 176, 248, 0.5);
+}
+
+#easy {
+    background-color: orange;
+}
+
+#easy:hover {
+    background-color: rgba(99, 176, 248, 0.5);
+}
+
+#medium {
+    background-color: darkorange;
+}
+
+#medium:hover {
+    background-color: rgba(99, 176, 248, 0.5);
+}
+
+#hard {
+    background-color: red;
+}
+
+#hard:hover {
+    background-color: rgba(99, 176, 248, 0.5);
+}
+
+#random {
+    background-color: purple;
+}
+
+#random:hover {
+    background-color: rgba(99, 176, 248, 0.5);
+}

@@ -17,7 +17,6 @@ const saveHighScore = (userFinalScore) => {
         }
         highScores.push(userScore);
         highScores.sort( (a, b) => b.score - a.score);
-        console.log(highScores);
 
         localStorage.setItem('highScores', JSON.stringify(highScores));
         

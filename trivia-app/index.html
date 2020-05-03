@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bodoh Lah Trivia App</title>
     <link href="./css/main.css" rel="stylesheet" type="text/css" />
+    <link href="./css/modals.css" rel="stylesheet" type="text/css" />
     <script
         src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
@@ -13,21 +14,32 @@
     <script src="./js/main.js" charset="utf-8"></script>
 </head>
 <body>
-    <button id="openModal" class="button">About the Game</button>
-    <div id="modal">
-        <div id="modal-textbox">
-            <h1>Bodoh Lah Trivia Game</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nostrum nulla, officiis at illum aut sit, harum ipsam odio accusantium doloribus quasi temporibus maxime praesentium voluptatem facilis. Molestias, impedit velit!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sapiente similique placeat. Neque sunt totam est error quasi aspernatur perspiciatis magnam cumque eaque sed, illum tempora? Optio at magni corrupti!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, blanditiis. Culpa, molestiae sint odio aut nisi reiciendis quae explicabo, sunt dolore aliquam beatae. Optio obcaecati perspiciatis consectetur error ex molestiae.</p>
-            <a id="closeModal" class="button" href="#">Close</a>
+    <button id="open-about-modal" class="button">About the Game</button>
+    <div id="about-modal" class="modal">
+        <div class="modal-textbox">
+            <h1>About Bodoh Lah Trivia Game</h1>
+            <p>Play this exciting Trivia Game and test your knowledge of trivia questions across many different topics! You can choose your difficulty level that you want to play - Easy, Medium or Hard - or even play Random which will mix questions of different difficulty levels.</p><br>
+            <p>After each game, you can save your score to our High Score list! See if you can climb to the top of this list!</p><br>
+            <p>Play to win, and most importantly, play to prove that you're not a Bodoh Lah!</p>
+            <a id="close-about-modal" class="button close-modal" href="#">Close</a>
         </div>
     </div>
     <div class="container">
         <div id="home" class="flex-center flex-column">
-            <h1>Bodoh Lah Trivia Game</h1>
-            <a class="button" href="./game.html">Play</a>
+            <img id="bodoh-lah-image" src="img/Bodoh-Lah-Trivia-Game.jpg" alt="Bodoh Lah Trivia Game" />
+            <a id="play-game" class="button" href="#">Play</a>
             <a class="button" href="./highscores.html">High Scores</a>
+        </div>
+    </div>
+
+    <div id="difficulty-level-modal" class="modal">
+        <div class="modal-textbox">
+            <h2>Choose Difficulty Level</h2>
+            <a id="easy" class="button difficulty-level-option" href="#">EASY</a>
+            <a id="medium" class="button difficulty-level-option" href="#">MEDIUM</a>
+            <a id="hard" class="button difficulty-level-option" href="#">HARD</a>
+            <a id="random" class="button difficulty-level-option" href="#">RANDOM</a>
+            <a id="close-difficulty-level-modal" class="button close-modal" href="#">Close</a>
         </div>
     </div>
 </body>
