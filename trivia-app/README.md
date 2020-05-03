@@ -1,4 +1,4 @@
-_Bodoh Lah!_ Trivia Game App
+# _Bodoh Lah!_ Trivia Game App #
 
 ## Overview
 The _Bodoh Lah!_ Trivia Game App will allow players to answer Trivia questions, earn points and save their high scores.
