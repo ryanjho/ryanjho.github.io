@@ -6,14 +6,17 @@
     <title>Bodoh Lah Trivia App</title>
     <link href="./css/main.css" rel="stylesheet" type="text/css" />
     <link href="./css/result.css" rel="stylesheet" type="text/css" />
+    <link href="./css/modals.css" rel="stylesheet" type="text/css" />
     <script
         src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
         crossorigin="anonymous">
     </script>
+    <script src="./js/main.js" charset="utf-8"></script>
     <script src="./js/result.js" charset="utf-8"></script>
 </head>
 <body>
+    <!-- Main Game Container -->
     <div class="container">
         <div id="results" class="flex-center flex-column">
             <p>Your Final Score:</p>
@@ -23,7 +26,26 @@
                 <button type="submit" id="save-score-button" class="button">Save Score</button>
             </form>
             <a class="button" href="./index.html">Play Again</a>
-            <a class="button" href="./highscores.html">High Scores</a>
+            <!-- <a class="button" href="#">High Scores</a> -->
+            <a id="high-scores-button" class="button" href="#">High Scores</a>
+        </div>
+    </div>
+    <!-- High Scores Modal -->
+    <div id="high-scores-modal-results" class="modal hidden">
+        <div class="modal-textbox">
+            <h2>High Scores</h2>
+            <table id="high-scores-table-results" class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">Rank</th>
+                      <th scope="col">Username</th>
+                      <th scope="col">Score</th>
+                    </tr>
+                  </thead>
+                  <tbody id="high-scores-results">
+                  </tbody>
+            </table>
+            <a id="close-high-scores-modal-results" class="button close-modal" href="#">Close</a>
         </div>
     </div>
 </body>

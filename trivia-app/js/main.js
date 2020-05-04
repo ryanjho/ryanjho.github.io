@@ -1,3 +1,4 @@
+// Variables
 let questions = [];
 let numberQuestions = 0;
 let currentQuestion;
@@ -5,27 +6,33 @@ let score = 0, questionCounter = 0;
 const TRIVIA_QUESTIONS_API = 'https://opentdb.com/api.php?';
 const AMOUNT_TRIVIA_QUESTIONS = 'amount=10';
 
+
+// Load Questions
 const loadQuestions = array => {
     questions = [...array];
     numberQuestions = questions.length;
 }
 
+// Displays Game Information (Question No, Difficulty, Current Score)
 const displayGameInformation = () => {
     $('#question-number').text(`${questionCounter} of ${numberQuestions}`);
     $('#difficulty').text(`${currentQuestion.difficulty[0].toUpperCase() + currentQuestion.difficulty.slice(1)}`);
     $('#score').text(`${score}`);
 }
 
+// Displays Question Text
 const displayQuestionText = (question) => {
     $('#question').text(question.question);
 }
 
+// Checks User Selected Option With Answer
 const checkAnswer = (question, userChoice) => {
     const correctAnswer = question.correct_answer === userChoice;
     if (correctAnswer) question++;
     return correctAnswer;
 }
 
+// Displays Question Options
 const displayQuestionOptions = (question) => {
     let options = [...question.incorrect_answers];
     const randomIndex  = Math.floor(Math.random() * (options.length + 1));
@@ -55,13 +62,11 @@ const displayQuestionOptions = (question) => {
             setTimeout( () => {
                 getQuestion(questions);
             }, 2000)
-
-            
         })
-
     }
 }
 
+// Get Question 
 const getQuestion = array => {
     if (questions.length === 0) {
         localStorage.setItem('userFinalScore', score);
@@ -78,58 +83,88 @@ const getQuestion = array => {
     displayGameInformation();
 }
 
+// Starts the Game
 const startGame = (data) => {
     questionCounter = 0;
     localStorage.setItem('userFinalScore', '0');
+    $('#home').toggleClass('hidden');
+    $('#game').toggleClass('hidden');
     loadQuestions(data);
     getQuestion(questions);
 }
 
-
-const openAboutModal = () => {
+// Display About Modal
+const displayAboutModal = () => {
     $('#open-about-modal').on('click', () => {
-        $('#about-modal').css('display', 'block');
+        $('#about-modal').toggleClass('hidden');
     })
-}
 
-const closeAboutModal = () => {
     $('#close-about-modal').on('click', () => {
-        $('#about-modal').css('display', 'none');
+        $('#about-modal').toggleClass('hidden');
     })
 }
 
-const openModal = () => {
-    openAboutModal();
-    closeAboutModal();
-}
-
-const openDifficultyLevelModal = () => {
+// Display Difficulty Level Modal
+const displayDifficultyLevelModal = () => {
     $('#play-game').on('click', () => {
-        $('#difficulty-level-modal').css('display', 'block');
+        $('#difficulty-level-modal').toggleClass('hidden');
     })
-}
 
-const closeDifficultyLevelModal = () => {
     $('#close-difficulty-level-modal').on('click', () => {
         $('#difficulty-level-modal').css('display', 'none');
     })
 }
 
-const difficultyLevelModal = () => {
-    openDifficultyLevelModal();
-    closeDifficultyLevelModal();
-}
-
+// Select Difficulty Level
 const selectDifficultyLevel = () => {
+    let DIFFICULTY_LEVEL = '';
+
     $('.difficulty-level-option').each(index => {
         $(`.difficulty-level-option:eq(${index})`).on('click', (event) => {
+            $('#difficulty-level-modal').toggleClass('hidden');
             const selectedDifficulty = $(event.currentTarget).attr('id');
-            if (selectedDifficulty === 'random') { 
-                return $(location).attr('href', './game.html')
-            } else {
-                return 'test';
+            
+            if (selectedDifficulty !== 'random') { 
+                DIFFICULTY_LEVEL = selectedDifficulty;
             }
+
+            const $promise = $.ajax({
+                url: TRIVIA_QUESTIONS_API + AMOUNT_TRIVIA_QUESTIONS + `&difficulty=${DIFFICULTY_LEVEL}`
+            })
+        
+            $promise.then(data => {
+                startGame(data.results);
+            }).catch(error => {
+                console.log("ERROR MESSAGE BELOW:")
+                console.log(error);
+            })
+
         });
+    })
+
+ 
+}
+
+// Display High Scores Modal
+const displayHighScoresModal = () => {
+    highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+    $('#high-scores-button').on('click', event => {
+        for(let i = 0; i < highScores.length; i++) {
+            $('#high-scores-table').append($(`
+            <tr>
+                <td>${i+1}</td>
+                <td>${highScores[i].username}</td>
+                <td>${highScores[i].score}</td>
+            </tr>`));
+        }
+
+        $('#high-scores-modal').toggleClass('hidden');
+    })
+
+    $('#close-high-scores-modal').on('click', () => {
+        $('#high-scores').empty();
+        $('#high-scores-modal').toggleClass('hidden');
     })
 }
 
@@ -137,16 +172,21 @@ const selectDifficultyLevel = () => {
 
 
 $( () => {
-    openModal();
-    difficultyLevelModal();
+    displayAboutModal();
+    displayDifficultyLevelModal();
+    displayHighScoresModal();
     selectDifficultyLevel();
 
-    $.ajax({
-        url: TRIVIA_QUESTIONS_API + AMOUNT_TRIVIA_QUESTIONS
-    }).then(data => {
-        startGame(data.results);
-    }).catch(error => {
-        console.log("ERROR MESSAGE BELOW:")
-        console.log(error);
-    })
+
+    // const $promise = $.ajax({
+    //     url: TRIVIA_QUESTIONS_API + AMOUNT_TRIVIA_QUESTIONS
+    // })
+
+    // $promise.then(data => {
+    //     startGame(data.results);
+    // }).catch(error => {
+    //     console.log("ERROR MESSAGE BELOW:")
+    //     console.log(error);
+    // })
+
 })
