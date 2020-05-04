@@ -28,9 +28,6 @@
 
 
 /* ABOUT MODAL STYLING */
-#about-modal {
-    display: none;
-}
 
 #open-about-modal {
     background-color: red;
@@ -39,9 +36,6 @@
 
 
 /* DIFFICULTY LEVEL MODAL STYLING */
-#difficulty-level-modal {
-    display: none;
-}
 
 .difficulty-level-option {
     display: block;
