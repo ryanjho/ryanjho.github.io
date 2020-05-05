@@ -6,6 +6,22 @@ let score = 0, questionCounter = 0;
 const TRIVIA_QUESTIONS_API = 'https://opentdb.com/api.php?';
 const AMOUNT_TRIVIA_QUESTIONS = 'amount=10';
 
+// Create Dummy Back-up Questions
+const createDummyQuestions = () => {    
+    const dummyQuestions = [];
+    const difficulty = ['easy', 'medium', 'hard'];
+    difficulty.forEach( level => {
+        for (let i = 1; i <= 4; i++) {
+            const dummyQuestion = {difficulty: level, question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'};
+            const choices = ['Option A', 'Option B', 'Option C', 'Option D'];
+            dummyQuestion.correct_answer = choices.splice(Math.floor(Math.random() * choices.length), 1)[0];
+            dummyQuestion.incorrect_answers = choices;
+            dummyQuestions.push(dummyQuestion);
+        }
+    })
+    return dummyQuestions;
+}
+
 
 // Load Questions
 const loadQuestions = array => {
@@ -48,8 +64,10 @@ const displayQuestionOptions = (question) => {
             
             if (checkAnswer(question, userChoice)) {
                 score++;
+                console.log(score);
                 $(event.currentTarget).addClass('correct-option');    
             } else {
+                console.log(score);
                 $(event.currentTarget).addClass('wrong-option');
                 
                 $('.option-text').each( index => {
@@ -137,6 +155,8 @@ const selectDifficultyLevel = () => {
             }).catch(error => {
                 console.log("ERROR MESSAGE BELOW:")
                 console.log(error);
+                alert('ERROR WITH API CALL. LOADING WITH DUMMY DATA!');
+                startGame(createDummyQuestions());
             })
 
         });
@@ -176,17 +196,5 @@ $( () => {
     displayDifficultyLevelModal();
     displayHighScoresModal();
     selectDifficultyLevel();
-
-
-    // const $promise = $.ajax({
-    //     url: TRIVIA_QUESTIONS_API + AMOUNT_TRIVIA_QUESTIONS
-    // })
-
-    // $promise.then(data => {
-    //     startGame(data.results);
-    // }).catch(error => {
-    //     console.log("ERROR MESSAGE BELOW:")
-    //     console.log(error);
-    // })
 
 })

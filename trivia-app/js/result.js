@@ -1,8 +1,13 @@
 // Display High Scores Modal
 const displayUserScore = () => {
-    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    const userScore = JSON.parse(localStorage.getItem('userFinalScore'));
+    $('#final-score').text(userScore);
+}
 
+const displayHighScore = () => {
     $('#high-scores-button').on('click', event => {
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+        
         for(let i = 0; i < highScores.length; i++) {
             $('#high-scores-table-results').append($(`
             <tr>
@@ -41,6 +46,7 @@ const saveHighScore = (userFinalScore) => {
 
 $( () => {
     displayUserScore();
+    displayHighScore();
     saveHighScore(localStorage.getItem('userFinalScore'));
     
 })
